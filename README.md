@@ -4,17 +4,22 @@ BeachHacks 2018 @ CSULB
 
 ## Home
 
-<img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/1.png" width="200">
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/1.png" width="200">
+</p>
+
 
 ## Image to Sketch
 
-<img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/2.png" width="200">
-<img align="left" src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/3.png" width="200">
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/2.png" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/3.png" width="200">
+</p>
 
 ## Colorize
 
 <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/4.png" width="200">
-<img align="left" src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/5.png" width="200">
+<img align="right" src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/5.png" width="200">
 
 ## Style Art
 
