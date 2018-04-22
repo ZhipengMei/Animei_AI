@@ -1,5 +1,5 @@
 # ANIME is LYFE!!!
-BeachHacks 2018 @ CSULB
+[BeachHacks 2018 @ CSULB](https://devpost.com/software/anime-is-lyfe)
 
 **ANIME is LYFE!!!** is a machine learning driven mobile application which aim to focus on image processing with high accuracy. 
 
