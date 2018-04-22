@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A3073BD208C07D90060C096 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739A208C07D90060C096 /* Math.swift */; };
-		3A3073BE208C07D90060C096 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739B208C07D90060C096 /* UIImage+CVPixelBuffer.swift */; };
-		3A3073BF208C07D90060C096 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739C208C07D90060C096 /* Array.swift */; };
-		3A3073C0208C07D90060C096 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739D208C07D90060C096 /* Predictions.swift */; };
-		3A3073C1208C07D90060C096 /* MultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739E208C07D90060C096 /* MultiArray.swift */; };
-		3A3073C2208C07D90060C096 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30739F208C07D90060C096 /* CVPixelBuffer+Helpers.swift */; };
-		3A3073C3208C07D90060C096 /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A0208C07D90060C096 /* NonMaxSuppression.swift */; };
-		3A3073C4208C07D90060C096 /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A1208C07D90060C096 /* MLMultiArray+Image.swift */; };
-		3A3073C5208C07D90060C096 /* FNS-Candy.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A3208C07D90060C096 /* FNS-Candy.mlmodel */; };
-		3A3073C6208C07D90060C096 /* FNS-Feathers.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A4208C07D90060C096 /* FNS-Feathers.mlmodel */; };
-		3A3073C7208C07D90060C096 /* FNS-La-Muse.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A5208C07D90060C096 /* FNS-La-Muse.mlmodel */; };
-		3A3073C8208C07D90060C096 /* FNS-Udnie.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A6208C07D90060C096 /* FNS-Udnie.mlmodel */; };
-		3A3073C9208C07D90060C096 /* FNS-The-Scream.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A7208C07D90060C096 /* FNS-The-Scream.mlmodel */; };
-		3A3073CA208C07D90060C096 /* FNS-Mosaic.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A8208C07D90060C096 /* FNS-Mosaic.mlmodel */; };
-		3A3073CB208C07D90060C096 /* StyleArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073A9208C07D90060C096 /* StyleArt.swift */; };
-		3A3073CC208C07D90060C096 /* StyleArtInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073AA208C07D90060C096 /* StyleArtInput.swift */; };
 		3A3073D0208C07D90060C096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3073B0208C07D90060C096 /* Main.storyboard */; };
 		3A3073D8208C08400060C096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3073D7208C08400060C096 /* Assets.xcassets */; };
-		3A3073E3208C08710060C096 /* colorizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073E1208C08710060C096 /* colorizeVC.swift */; };
-		3A3073E4208C08710060C096 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073E2208C08710060C096 /* FilterCollectionViewCell.swift */; };
 		3A3073E8208C09710060C096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073E7208C09710060C096 /* ViewController.swift */; };
-		3A3073EA208C0AB00060C096 /* StyleArtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3073E9208C0AB00060C096 /* StyleArtVC.swift */; };
+		3A307418208C0DDE0060C096 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307416208C0DDE0060C096 /* FilterCollectionViewCell.swift */; };
+		3A307419208C0DDE0060C096 /* colorizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307417208C0DDE0060C096 /* colorizeVC.swift */; };
+		3A307420208C0DFC0060C096 /* FNS-Mosaic.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741A208C0DFC0060C096 /* FNS-Mosaic.mlmodel */; };
+		3A307421208C0DFC0060C096 /* FNS-Udnie.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741B208C0DFC0060C096 /* FNS-Udnie.mlmodel */; };
+		3A307422208C0DFC0060C096 /* FNS-The-Scream.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741C208C0DFC0060C096 /* FNS-The-Scream.mlmodel */; };
+		3A307423208C0DFC0060C096 /* FNS-Candy.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741D208C0DFC0060C096 /* FNS-Candy.mlmodel */; };
+		3A307424208C0DFC0060C096 /* FNS-La-Muse.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741E208C0DFC0060C096 /* FNS-La-Muse.mlmodel */; };
+		3A307425208C0DFC0060C096 /* FNS-Feathers.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A30741F208C0DFC0060C096 /* FNS-Feathers.mlmodel */; };
+		3A307429208C0E1A0060C096 /* StyleArtInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307426208C0E1A0060C096 /* StyleArtInput.swift */; };
+		3A30742A208C0E1A0060C096 /* StyleArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307427208C0E1A0060C096 /* StyleArt.swift */; };
+		3A30742B208C0E1A0060C096 /* StyleArtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307428208C0E1A0060C096 /* StyleArtVC.swift */; };
+		3A307434208C0E300060C096 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30742C208C0E300060C096 /* UIImage+CVPixelBuffer.swift */; };
+		3A307435208C0E300060C096 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30742D208C0E300060C096 /* CVPixelBuffer+Helpers.swift */; };
+		3A307436208C0E300060C096 /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30742E208C0E300060C096 /* NonMaxSuppression.swift */; };
+		3A307437208C0E300060C096 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30742F208C0E300060C096 /* Array.swift */; };
+		3A307438208C0E300060C096 /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307430208C0E300060C096 /* MLMultiArray+Image.swift */; };
+		3A307439208C0E300060C096 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307431208C0E300060C096 /* Predictions.swift */; };
+		3A30743A208C0E300060C096 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307432208C0E300060C096 /* Math.swift */; };
+		3A30743B208C0E300060C096 /* MultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307433208C0E300060C096 /* MultiArray.swift */; };
 		3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3782B208BD9CC001029A9 /* AppDelegate.swift */; };
 		3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AD37832208BD9CC001029A9 /* Animei_AI.xcdatamodeld */; };
 		3AD37839208BD9CE001029A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */; };
@@ -36,28 +36,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A30739A208C07D90060C096 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		3A30739B208C07D90060C096 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		3A30739C208C07D90060C096 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		3A30739D208C07D90060C096 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
-		3A30739E208C07D90060C096 /* MultiArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArray.swift; sourceTree = "<group>"; };
-		3A30739F208C07D90060C096 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
-		3A3073A0208C07D90060C096 /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
-		3A3073A1208C07D90060C096 /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
-		3A3073A3208C07D90060C096 /* FNS-Candy.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Candy.mlmodel"; sourceTree = "<group>"; };
-		3A3073A4208C07D90060C096 /* FNS-Feathers.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Feathers.mlmodel"; sourceTree = "<group>"; };
-		3A3073A5208C07D90060C096 /* FNS-La-Muse.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-La-Muse.mlmodel"; sourceTree = "<group>"; };
-		3A3073A6208C07D90060C096 /* FNS-Udnie.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Udnie.mlmodel"; sourceTree = "<group>"; };
-		3A3073A7208C07D90060C096 /* FNS-The-Scream.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-The-Scream.mlmodel"; sourceTree = "<group>"; };
-		3A3073A8208C07D90060C096 /* FNS-Mosaic.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Mosaic.mlmodel"; sourceTree = "<group>"; };
-		3A3073A9208C07D90060C096 /* StyleArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArt.swift; sourceTree = "<group>"; };
-		3A3073AA208C07D90060C096 /* StyleArtInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArtInput.swift; sourceTree = "<group>"; };
 		3A3073B1208C07D90060C096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A3073D7208C08400060C096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A3073E1208C08710060C096 /* colorizeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorizeVC.swift; sourceTree = "<group>"; };
-		3A3073E2208C08710060C096 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A3073E7208C09710060C096 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A3073E9208C0AB00060C096 /* StyleArtVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArtVC.swift; sourceTree = "<group>"; };
+		3A307416208C0DDE0060C096 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A307417208C0DDE0060C096 /* colorizeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorizeVC.swift; sourceTree = "<group>"; };
+		3A30741A208C0DFC0060C096 /* FNS-Mosaic.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Mosaic.mlmodel"; sourceTree = "<group>"; };
+		3A30741B208C0DFC0060C096 /* FNS-Udnie.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Udnie.mlmodel"; sourceTree = "<group>"; };
+		3A30741C208C0DFC0060C096 /* FNS-The-Scream.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-The-Scream.mlmodel"; sourceTree = "<group>"; };
+		3A30741D208C0DFC0060C096 /* FNS-Candy.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Candy.mlmodel"; sourceTree = "<group>"; };
+		3A30741E208C0DFC0060C096 /* FNS-La-Muse.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-La-Muse.mlmodel"; sourceTree = "<group>"; };
+		3A30741F208C0DFC0060C096 /* FNS-Feathers.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FNS-Feathers.mlmodel"; sourceTree = "<group>"; };
+		3A307426208C0E1A0060C096 /* StyleArtInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArtInput.swift; sourceTree = "<group>"; };
+		3A307427208C0E1A0060C096 /* StyleArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArt.swift; sourceTree = "<group>"; };
+		3A307428208C0E1A0060C096 /* StyleArtVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleArtVC.swift; sourceTree = "<group>"; };
+		3A30742C208C0E300060C096 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		3A30742D208C0E300060C096 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		3A30742E208C0E300060C096 /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		3A30742F208C0E300060C096 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		3A307430208C0E300060C096 /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		3A307431208C0E300060C096 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		3A307432208C0E300060C096 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		3A307433208C0E300060C096 /* MultiArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArray.swift; sourceTree = "<group>"; };
 		3AD37828208BD9CC001029A9 /* Animei_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animei_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD3782B208BD9CC001029A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD37833208BD9CC001029A9 /* Animei_AI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animei_AI.xcdatamodel; sourceTree = "<group>"; };
@@ -89,24 +89,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3A307394208C07D90060C096 /* colorize */ = {
-			isa = PBXGroup;
-			children = (
-				3A3073E1208C08710060C096 /* colorizeVC.swift */,
-				3A3073E2208C08710060C096 /* FilterCollectionViewCell.swift */,
-			);
-			name = colorize;
-			path = ../../Colorization/Colorization/colorize;
-			sourceTree = "<group>";
-		};
 		3A307398208C07D90060C096 /* StyleArt */ = {
 			isa = PBXGroup;
 			children = (
 				3A307399208C07D90060C096 /* CoreMLHelpers */,
 				3A3073A2208C07D90060C096 /* CoreMLModels */,
-				3A3073A9208C07D90060C096 /* StyleArt.swift */,
-				3A3073AA208C07D90060C096 /* StyleArtInput.swift */,
-				3A3073E9208C0AB00060C096 /* StyleArtVC.swift */,
+				3A307427208C0E1A0060C096 /* StyleArt.swift */,
+				3A307426208C0E1A0060C096 /* StyleArtInput.swift */,
+				3A307428208C0E1A0060C096 /* StyleArtVC.swift */,
 			);
 			name = StyleArt;
 			path = "../../../Downloads/StyleArt-master/StyleArt";
@@ -115,14 +105,14 @@
 		3A307399208C07D90060C096 /* CoreMLHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				3A30739A208C07D90060C096 /* Math.swift */,
-				3A30739B208C07D90060C096 /* UIImage+CVPixelBuffer.swift */,
-				3A30739C208C07D90060C096 /* Array.swift */,
-				3A30739D208C07D90060C096 /* Predictions.swift */,
-				3A30739E208C07D90060C096 /* MultiArray.swift */,
-				3A30739F208C07D90060C096 /* CVPixelBuffer+Helpers.swift */,
-				3A3073A0208C07D90060C096 /* NonMaxSuppression.swift */,
-				3A3073A1208C07D90060C096 /* MLMultiArray+Image.swift */,
+				3A30742F208C0E300060C096 /* Array.swift */,
+				3A30742D208C0E300060C096 /* CVPixelBuffer+Helpers.swift */,
+				3A307432208C0E300060C096 /* Math.swift */,
+				3A307430208C0E300060C096 /* MLMultiArray+Image.swift */,
+				3A307433208C0E300060C096 /* MultiArray.swift */,
+				3A30742E208C0E300060C096 /* NonMaxSuppression.swift */,
+				3A307431208C0E300060C096 /* Predictions.swift */,
+				3A30742C208C0E300060C096 /* UIImage+CVPixelBuffer.swift */,
 			);
 			path = CoreMLHelpers;
 			sourceTree = "<group>";
@@ -130,14 +120,23 @@
 		3A3073A2208C07D90060C096 /* CoreMLModels */ = {
 			isa = PBXGroup;
 			children = (
-				3A3073A3208C07D90060C096 /* FNS-Candy.mlmodel */,
-				3A3073A4208C07D90060C096 /* FNS-Feathers.mlmodel */,
-				3A3073A5208C07D90060C096 /* FNS-La-Muse.mlmodel */,
-				3A3073A6208C07D90060C096 /* FNS-Udnie.mlmodel */,
-				3A3073A7208C07D90060C096 /* FNS-The-Scream.mlmodel */,
-				3A3073A8208C07D90060C096 /* FNS-Mosaic.mlmodel */,
+				3A30741D208C0DFC0060C096 /* FNS-Candy.mlmodel */,
+				3A30741F208C0DFC0060C096 /* FNS-Feathers.mlmodel */,
+				3A30741E208C0DFC0060C096 /* FNS-La-Muse.mlmodel */,
+				3A30741A208C0DFC0060C096 /* FNS-Mosaic.mlmodel */,
+				3A30741C208C0DFC0060C096 /* FNS-The-Scream.mlmodel */,
+				3A30741B208C0DFC0060C096 /* FNS-Udnie.mlmodel */,
 			);
 			path = CoreMLModels;
+			sourceTree = "<group>";
+		};
+		3A307415208C0DDE0060C096 /* colorize */ = {
+			isa = PBXGroup;
+			children = (
+				3A307416208C0DDE0060C096 /* FilterCollectionViewCell.swift */,
+				3A307417208C0DDE0060C096 /* colorizeVC.swift */,
+			);
+			path = colorize;
 			sourceTree = "<group>";
 		};
 		3AD3781F208BD9CC001029A9 = {
@@ -161,12 +160,12 @@
 		3AD3782A208BD9CC001029A9 /* Animei_AI */ = {
 			isa = PBXGroup;
 			children = (
+				3A307415208C0DDE0060C096 /* colorize */,
 				3A307398208C07D90060C096 /* StyleArt */,
-				3A307394208C07D90060C096 /* colorize */,
 				3A3073B0208C07D90060C096 /* Main.storyboard */,
 				3A3073E7208C09710060C096 /* ViewController.swift */,
-				3A3073D7208C08400060C096 /* Assets.xcassets */,
 				3AD3782B208BD9CC001029A9 /* AppDelegate.swift */,
+				3A3073D7208C08400060C096 /* Assets.xcassets */,
 				3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */,
 				3AD3783A208BD9CE001029A9 /* Info.plist */,
 				3AD37832208BD9CC001029A9 /* Animei_AI.xcdatamodeld */,
@@ -310,28 +309,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A307439208C0E300060C096 /* Predictions.swift in Sources */,
+				3A30742B208C0E1A0060C096 /* StyleArtVC.swift in Sources */,
+				3A307436208C0E300060C096 /* NonMaxSuppression.swift in Sources */,
+				3A307423208C0DFC0060C096 /* FNS-Candy.mlmodel in Sources */,
+				3A307438208C0E300060C096 /* MLMultiArray+Image.swift in Sources */,
 				3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */,
-				3A3073C7208C07D90060C096 /* FNS-La-Muse.mlmodel in Sources */,
-				3A3073E3208C08710060C096 /* colorizeVC.swift in Sources */,
-				3A3073C4208C07D90060C096 /* MLMultiArray+Image.swift in Sources */,
-				3A3073CB208C07D90060C096 /* StyleArt.swift in Sources */,
-				3A3073CA208C07D90060C096 /* FNS-Mosaic.mlmodel in Sources */,
-				3A3073EA208C0AB00060C096 /* StyleArtVC.swift in Sources */,
-				3A3073C5208C07D90060C096 /* FNS-Candy.mlmodel in Sources */,
 				3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */,
-				3A3073C0208C07D90060C096 /* Predictions.swift in Sources */,
-				3A3073BE208C07D90060C096 /* UIImage+CVPixelBuffer.swift in Sources */,
-				3A3073BF208C07D90060C096 /* Array.swift in Sources */,
-				3A3073CC208C07D90060C096 /* StyleArtInput.swift in Sources */,
-				3A3073C2208C07D90060C096 /* CVPixelBuffer+Helpers.swift in Sources */,
-				3A3073C1208C07D90060C096 /* MultiArray.swift in Sources */,
-				3A3073C6208C07D90060C096 /* FNS-Feathers.mlmodel in Sources */,
-				3A3073C8208C07D90060C096 /* FNS-Udnie.mlmodel in Sources */,
-				3A3073C9208C07D90060C096 /* FNS-The-Scream.mlmodel in Sources */,
-				3A3073C3208C07D90060C096 /* NonMaxSuppression.swift in Sources */,
+				3A307424208C0DFC0060C096 /* FNS-La-Muse.mlmodel in Sources */,
+				3A307419208C0DDE0060C096 /* colorizeVC.swift in Sources */,
+				3A307421208C0DFC0060C096 /* FNS-Udnie.mlmodel in Sources */,
+				3A307434208C0E300060C096 /* UIImage+CVPixelBuffer.swift in Sources */,
+				3A307437208C0E300060C096 /* Array.swift in Sources */,
+				3A307429208C0E1A0060C096 /* StyleArtInput.swift in Sources */,
+				3A307435208C0E300060C096 /* CVPixelBuffer+Helpers.swift in Sources */,
+				3A307420208C0DFC0060C096 /* FNS-Mosaic.mlmodel in Sources */,
+				3A30743B208C0E300060C096 /* MultiArray.swift in Sources */,
+				3A30742A208C0E1A0060C096 /* StyleArt.swift in Sources */,
+				3A307422208C0DFC0060C096 /* FNS-The-Scream.mlmodel in Sources */,
+				3A30743A208C0E300060C096 /* Math.swift in Sources */,
+				3A307418208C0DDE0060C096 /* FilterCollectionViewCell.swift in Sources */,
+				3A307425208C0DFC0060C096 /* FNS-Feathers.mlmodel in Sources */,
 				3A3073E8208C09710060C096 /* ViewController.swift in Sources */,
-				3A3073E4208C08710060C096 /* FilterCollectionViewCell.swift in Sources */,
-				3A3073BD208C07D90060C096 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
