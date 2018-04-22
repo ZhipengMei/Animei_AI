@@ -19,3 +19,4 @@ class FilterCollectionViewCell: UICollectionViewCell {
         self.layer.borderWidth =  1
     }
 }
+ 

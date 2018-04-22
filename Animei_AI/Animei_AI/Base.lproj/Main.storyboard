@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -170,6 +169,24 @@
                                     <constraint firstAttribute="width" secondItem="peK-8d-Wbv" secondAttribute="height" multiplier="1:1" id="RCH-D6-P6M"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsI-0I-YHL">
+                                <rect key="frame" x="62" y="418" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Colorize">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="colorize:" destination="zzb-ti-Rxh" eventType="touchUpInside" id="BsM-gI-Zi3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-xg-cwd">
+                                <rect key="frame" x="207" y="418" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check Result"/>
+                                <connections>
+                                    <segue destination="3gT-nW-9kh" kind="show" id="TaF-zf-Ofw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -192,12 +209,45 @@
                     </navigationItem>
                     <connections>
                         <outlet property="CollectionView" destination="Ms5-fn-Atz" id="KzK-4i-TGf"/>
+                        <outlet property="colorize_button" destination="hsI-0I-YHL" id="KvP-0N-z1g"/>
                         <outlet property="imageView" destination="peK-8d-Wbv" id="dgx-P8-Q0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCF-8m-gwI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2042" y="276"/>
+            <point key="canvasLocation" x="2040.8" y="275.71214392803603"/>
+        </scene>
+        <!--ResultVC-->
+        <scene sceneID="XG4-yo-NPH">
+            <objects>
+                <viewController id="3gT-nW-9kh" customClass="ResultVC" customModule="Animei_AI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6Y-Zh-1k5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LvI-db-Jti">
+                                <rect key="frame" x="38" y="184" width="299" height="299"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="Ees-om-vos"/>
+                                    <constraint firstAttribute="height" constant="299" id="r9g-aZ-BQf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LvI-db-Jti" firstAttribute="centerX" secondItem="p6Y-Zh-1k5" secondAttribute="centerX" id="8Od-yH-3HZ"/>
+                            <constraint firstItem="LvI-db-Jti" firstAttribute="width" secondItem="LvI-db-Jti" secondAttribute="height" multiplier="1:1" id="BNc-BE-MYJ"/>
+                            <constraint firstItem="LvI-db-Jti" firstAttribute="centerY" secondItem="p6Y-Zh-1k5" secondAttribute="centerY" id="UWb-Fg-9dp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UED-F3-Ksu"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LvI-db-Jti" id="fQu-38-VPl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9a5-KW-prC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2732" y="276"/>
         </scene>
         <!--StyleArts-->
         <scene sceneID="doX-Av-Zaw">

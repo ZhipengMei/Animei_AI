@@ -6,6 +6,6 @@ target 'Animei_AI' do
   use_frameworks!
 
   # Pods for Animei_AI
-  pod 'NVActivityIndicatorView' # github.com/ninjaprox/NVActivityIndicatorView
+  pod 'Alamofire', '~> 4.7'
 
 end

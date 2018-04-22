@@ -7,17 +7,18 @@
 //
 
 import UIKit
-import CoreML
+import Alamofire
 
 class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     
     //MARK:- IBOutlets
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var colorize_button: UIButton!
     
     //MARK:- Properties
     var originalImage:UIImage?
-  
+    
     //MARK:- ViewController life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +27,17 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
         self.imageView.layer.borderWidth = 1.0
         self.imageView.layer.borderColor = UIColor.black.cgColor
         
-       
+//        self.imageView.image = UIImage(named:"girl")!
+        self.imageView.image = UIImage(named:"Vegeta_Sketched")!
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-     
-       self.originalImage = self.imageView.image
-       CollectionView.delegate = self
-       CollectionView.dataSource = self
+        
+        self.originalImage = self.imageView.image
+        CollectionView.delegate = self
+        CollectionView.dataSource = self
         
     }
     //MARK:- Memory Management
@@ -42,20 +45,6 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    //MARK:- IBActions
-//    @IBAction func camera(_ sender: Any) {
-//
-//        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
-//            return
-//        }
-//
-//        let cameraPicker = UIImagePickerController()
-//        cameraPicker.delegate = self
-//        cameraPicker.sourceType = .camera
-//        cameraPicker.allowsEditing = false
-//
-//        present(cameraPicker, animated: true)
-//    }
     
     @IBAction func openLibrary(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -64,13 +53,14 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
         picker.sourceType = .photoLibrary
         present(picker, animated: true)
     }
+    
     //MARK:- CollectionView datasource and delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-          let cell:FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "filter", for: indexPath) as! FilterCollectionViewCell
+        let cell:FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "filter", for: indexPath) as! FilterCollectionViewCell
         switch indexPath.item {
         case 0:
             cell.lbl.text = "Mosaic"
@@ -90,38 +80,71 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
         case 5:
             cell.lbl.text = "Feathers"
             cell.imageView.image = #imageLiteral(resourceName: "Feathers")
-       
+            
         default:
             cell.lbl.text = ""
         }
         
-        
         return cell
     }
-  
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
-        
-//        DispatchQueue.main.async {
-//            self.view.showHud(message: "Loading")
-//        }
-        
-        if self.imageView.image != nil{
-            
-            StyleArt.shared.process(image: self.originalImage!, style: ArtStyle(rawValue: indexPath.row)!, compeletion: { (result) in
-                
-                if let image = result{
-                    self.imageView.image = image
-                }
-            })
-        }
-        
-//        DispatchQueue.main.async {
-//            self.view.hideHud()
-//        }
-
+        //select reference images here
     }
+    
+    //colorize function call
+    @IBAction func colorize(_ sender: Any) {
+        colorize_button.isEnabled = false
+        
+        // make an API call here
+        print("\n\n\ncolorize clicked\n")
+        
+        let urlString = "http://localhost:3000/tasks"
+        post_request(urlString: urlString)
+    }
+    
+    
+    func post_request(urlString: String) {
+        let image = self.originalImage!
+        let imgData = UIImageJPEGRepresentation(image, 0.2)!
+
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "profileImage",fileName: "file.jpg", mimeType: "image/jpg")
+        },
+        to: urlString)
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.responseString { response in
+
+                    //parse retured data
+                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject]
+                    
+                    print(json!["path"]!)
+                    
+                    self.post_path_request(path: json!["path"]! as! String)
+                    
+                    if json!["path"] != nil {
+                        let vc = ResultVC()
+                        vc.path = json!["path"]! as? String
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+                return
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        }
+    }
+    
+    func post_path_request(path: String) {
+        print(path)
+        let urlString = "http://localhost:3000/tasks/path"
+        Alamofire.request(urlString, method: .post, parameters: ["path" : path], encoding: URLEncoding.default)
+        colorize_button.isEnabled = true
+    }
+    
 }
 
 extension colorizeVC: UIImagePickerControllerDelegate {
@@ -132,14 +155,12 @@ extension colorizeVC: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: true)
-      
+        
         guard let image = info["UIImagePickerControllerOriginalImage"] as? UIImage else {
             return
         }
-          originalImage = image
-          imageView.image = image
+        originalImage = image
+        imageView.image = image
     }
-    
-    
-    
+
 }

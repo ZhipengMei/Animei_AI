@@ -29,6 +29,7 @@
 		3A307439208C0E300060C096 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307431208C0E300060C096 /* Predictions.swift */; };
 		3A30743A208C0E300060C096 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307432208C0E300060C096 /* Math.swift */; };
 		3A30743B208C0E300060C096 /* MultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307433208C0E300060C096 /* MultiArray.swift */; };
+		3A805574208C3C480008841F /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805573208C3C480008841F /* ResultVC.swift */; };
 		3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3782B208BD9CC001029A9 /* AppDelegate.swift */; };
 		3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AD37832208BD9CC001029A9 /* Animei_AI.xcdatamodeld */; };
 		3AD37839208BD9CE001029A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		3A307431208C0E300060C096 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
 		3A307432208C0E300060C096 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		3A307433208C0E300060C096 /* MultiArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArray.swift; sourceTree = "<group>"; };
+		3A805573208C3C480008841F /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		3AD37828208BD9CC001029A9 /* Animei_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animei_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD3782B208BD9CC001029A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD37833208BD9CC001029A9 /* Animei_AI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animei_AI.xcdatamodel; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				3A307416208C0DDE0060C096 /* FilterCollectionViewCell.swift */,
 				3A307417208C0DDE0060C096 /* colorizeVC.swift */,
+				3A805573208C3C480008841F /* ResultVC.swift */,
 			);
 			path = colorize;
 			sourceTree = "<group>";
@@ -291,11 +294,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Animei_AI/Pods-Animei_AI-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,6 +314,7 @@
 			files = (
 				3A307439208C0E300060C096 /* Predictions.swift in Sources */,
 				3A30742B208C0E1A0060C096 /* StyleArtVC.swift in Sources */,
+				3A805574208C3C480008841F /* ResultVC.swift in Sources */,
 				3A307436208C0E300060C096 /* NonMaxSuppression.swift in Sources */,
 				3A307423208C0DFC0060C096 /* FNS-Candy.mlmodel in Sources */,
 				3A307438208C0E300060C096 /* MLMultiArray+Image.swift in Sources */,
