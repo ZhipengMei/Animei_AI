@@ -31,6 +31,29 @@ BeachHacks 2018 @ CSULB
 </p>
 
 
-<img align="left" src="" width="200">
+## More Colorization
+
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/11.png" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/111.jpg" width="200">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/22.jpg" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/222.jpg" width="200">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/33.jpg" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/333.jpg" width="200">
+</p>
+
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/44.jpg" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/444.jpg" width="200">
+</p>
+
+
+
 
 
