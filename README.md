@@ -74,4 +74,12 @@ Machine Learning Models: [STYLE2PAINTS 2.1](https://github.com/lllyasviel/style2
   <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/output/666.jpg" width="200">
 </p>
 
+## Video Walkthrough 
 
+Here's a walkthrough of implemented user stories:
+
+<p align="center">
+  <img width="" height="" src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/animei_ai.gif">
+</p>
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
