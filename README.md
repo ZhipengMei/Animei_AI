@@ -13,7 +13,7 @@ Machine Learning Models: [STYLE2PAINTS 2.1](https://github.com/lllyasviel/style2
 
 <p align="center">
   <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/0.png" width="200">
-  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/00.png" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/verf_code.png" width="200">
 </p>
 
 ## Home
