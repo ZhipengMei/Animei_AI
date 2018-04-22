@@ -16,6 +16,8 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
     
     //MARK:- IBOutlets
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var result_button: UIButton!
+    @IBOutlet weak var convert_button: UIButton!
     
     
     //MARK:- Properties
@@ -28,13 +30,23 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
         self.imageView.layer.cornerRadius = 4
         self.imageView.layer.borderWidth = 1.0
         self.imageView.layer.borderColor = UIColor.black.cgColor
-        
+        button_swap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.originalImage = self.imageView.image
     }
     
+    func button_swap() {
+        let isConvert = UserDefaults.standard.bool(forKey: "convert_button")
+        if isConvert == true {
+            convert_button.isHidden = true
+            result_button.isHidden = false
+        } else {
+            convert_button.isHidden = false
+            result_button.isHidden = true
+        }
+    }
 
     
     @IBAction func openLibrary(_ sender: Any) {
@@ -58,7 +70,7 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "profileImage",fileName: "file.jpg", mimeType: "image/jpg")
         },
-                         to: urlString)
+        to: urlString)
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -75,6 +87,9 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
                         //save the file path
                         self.defaults.set(path, forKey: "sketchKeras_path")
                         
+                        // swap buttons
+                        self.defaults.set(true, forKey: "convert_button")
+                        self.button_swap()
                     }
                 }
                 return
@@ -108,5 +123,9 @@ extension Image2SketchVC: UIImagePickerControllerDelegate {
         }
         originalImage = image
         imageView.image = image
+        
+        // swap buttons
+        self.defaults.set(false, forKey: "convert_button")
+        self.button_swap()
     }
 }
