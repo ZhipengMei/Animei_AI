@@ -53,9 +53,6 @@ class ResultVC: UIViewController {
         })
     }
     
-    
-    
-    
     func blur_bg() {
         let imageView = UIImageView(image: UIImage(named: "bg"))
         imageView.frame = view.bounds
@@ -67,26 +64,6 @@ class ResultVC: UIViewController {
         blurredEffectView.frame = imageView.bounds
         view.addSubview(blurredEffectView)
     }
-    
-    
-    
-    
-    
-    
-    
 
-//    func get_request(urlString: String) {
-//
-//        // Alamofire 4
-//        Alamofire.request(urlString).response { response in // method defaults to `.get`
-//
-//            //parse retured data
-//            guard let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) else {
-//                return
-//            }
-//            print(json)
-//        }
-//    }
- 
 
 }

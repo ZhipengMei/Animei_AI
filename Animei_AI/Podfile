@@ -7,5 +7,5 @@ target 'Animei_AI' do
 
   # Pods for Animei_AI
   pod 'Alamofire', '~> 4.7'
-
+  
 end

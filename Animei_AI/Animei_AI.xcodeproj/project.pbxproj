@@ -33,6 +33,7 @@
 		3A805576208C823E0008841F /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805575208C823E0008841F /* UIImage+Gif.swift */; };
 		3A805579208CA16C0008841F /* Image2SketchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805578208CA16C0008841F /* Image2SketchVC.swift */; };
 		3A80557B208CA34C0008841F /* result_i2kVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80557A208CA34C0008841F /* result_i2kVC.swift */; };
+		3A805581208D1E800008841F /* telesignVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805580208D1E800008841F /* telesignVC.swift */; };
 		3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3782B208BD9CC001029A9 /* AppDelegate.swift */; };
 		3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AD37832208BD9CC001029A9 /* Animei_AI.xcdatamodeld */; };
 		3AD37839208BD9CE001029A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		3A805575208C823E0008841F /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3A805578208CA16C0008841F /* Image2SketchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image2SketchVC.swift; sourceTree = "<group>"; };
 		3A80557A208CA34C0008841F /* result_i2kVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result_i2kVC.swift; sourceTree = "<group>"; };
+		3A805580208D1E800008841F /* telesignVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = telesignVC.swift; sourceTree = "<group>"; };
 		3AD37828208BD9CC001029A9 /* Animei_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animei_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD3782B208BD9CC001029A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD37833208BD9CC001029A9 /* Animei_AI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animei_AI.xcdatamodel; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				3A307398208C07D90060C096 /* StyleArt */,
 				3A3073B0208C07D90060C096 /* Main.storyboard */,
 				3A3073E7208C09710060C096 /* ViewController.swift */,
+				3A805580208D1E800008841F /* telesignVC.swift */,
 				3AD3782B208BD9CC001029A9 /* AppDelegate.swift */,
 				3A3073D7208C08400060C096 /* Assets.xcassets */,
 				3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */,
@@ -339,6 +342,7 @@
 				3A805576208C823E0008841F /* UIImage+Gif.swift in Sources */,
 				3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */,
 				3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */,
+				3A805581208D1E800008841F /* telesignVC.swift in Sources */,
 				3A307424208C0DFC0060C096 /* FNS-La-Muse.mlmodel in Sources */,
 				3A307419208C0DDE0060C096 /* colorizeVC.swift in Sources */,
 				3A307421208C0DFC0060C096 /* FNS-Udnie.mlmodel in Sources */,
