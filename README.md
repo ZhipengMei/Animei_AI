@@ -9,6 +9,13 @@ Back-End: [Node.js](), [MongoDB](https://www.mongodb.com/), [Nodemon](https://gi
 
 Machine Learning Models: [STYLE2PAINTS 2.1](https://github.com/lllyasviel/style2paints), [sketchKeras](https://github.com/lllyasviel/sketchKeras), [neural-style](https://github.com/jcjohnson/neural-style)
 
+## TeleSign Verification
+
+<p align="center">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/0.png" width="200">
+  <img src="https://github.com/ZhipengMei/Animei_AI/blob/master/img/screenshot/00.png" width="200">
+</p>
+
 ## Home
 
 <p align="center">
