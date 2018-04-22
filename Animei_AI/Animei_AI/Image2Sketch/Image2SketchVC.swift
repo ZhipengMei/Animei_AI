@@ -31,6 +31,9 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
         self.imageView.layer.borderWidth = 1.0
         self.imageView.layer.borderColor = UIColor.black.cgColor
         button_swap()
+        
+        result_button.layer.cornerRadius = 8
+        convert_button.layer.cornerRadius = 8
     }
     
     override func viewWillAppear(_ animated: Bool) {

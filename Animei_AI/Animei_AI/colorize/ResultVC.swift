@@ -17,7 +17,9 @@ class ResultVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        blur_bg()
         self.imageView.loadGif(asset: "loading")
+        self.view.bringSubview(toFront: self.imageView)
         
         //var filepath = "/uploads/1524378659588/file.jpg"
         let path = UserDefaults.standard.string(forKey: "result_path")
@@ -54,7 +56,17 @@ class ResultVC: UIViewController {
     
     
     
-    
+    func blur_bg() {
+        let imageView = UIImageView(image: UIImage(named: "bg"))
+        imageView.frame = view.bounds
+        imageView.contentMode = .scaleToFill
+        view.addSubview(imageView)
+        
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = imageView.bounds
+        view.addSubview(blurredEffectView)
+    }
     
     
     

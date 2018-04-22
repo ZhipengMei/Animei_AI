@@ -31,8 +31,11 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
         
         // Do any additional setup after loading the view, typically from a nib.
         self.imageView.layer.cornerRadius = 4
-        self.imageView.layer.borderWidth = 1.0
-        self.imageView.layer.borderColor = UIColor.black.cgColor
+        self.imageView.layer.borderWidth = 0.5
+        self.imageView.layer.borderColor = UIColor.white.cgColor
+        
+        self.colorize_button.layer.cornerRadius = 8
+        self.result_button.layer.cornerRadius = 8
         
         if let image_data = UserDefaults.standard.data(forKey: "chosen_image") {
             self.imageView.image = UIImage(data:image_data)

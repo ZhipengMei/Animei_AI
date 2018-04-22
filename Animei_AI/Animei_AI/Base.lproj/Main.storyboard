@@ -57,7 +57,9 @@
                         <color key="backgroundColor" red="0.3803921569" green="0.56862745100000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ANIME is LYFE!!!" id="aGZ-vd-LLH"/>
+                    <navigationItem key="navigationItem" title="ANIME is LYFE!!!" id="aGZ-vd-LLH">
+                        <barButtonItem key="backBarButtonItem" title="囧" id="X24-Fh-Tj5"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,22 +134,26 @@
                                     <constraint firstAttribute="width" secondItem="peK-8d-Wbv" secondAttribute="height" multiplier="1:1" id="RCH-D6-P6M"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-xg-cwd">
-                                <rect key="frame" x="142" y="418" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Check Result"/>
-                                <connections>
-                                    <segue destination="3gT-nW-9kh" kind="show" id="WTe-H2-X8o"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsI-0I-YHL">
-                                <rect key="frame" x="140" y="418" width="94" height="30"/>
+                                <rect key="frame" x="122" y="410" width="130" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37994769150000002" green="0.812798083" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Colorize">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="colorize:" destination="zzb-ti-Rxh" eventType="touchUpInside" id="BsM-gI-Zi3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-xg-cwd">
+                                <rect key="frame" x="122" y="410" width="130" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37994769150000002" green="0.812798083" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Check Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3gT-nW-9kh" kind="show" id="WTe-H2-X8o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -348,7 +354,7 @@
                         <viewControllerLayoutGuide type="top" id="LhZ-N4-8Ms"/>
                         <viewControllerLayoutGuide type="bottom" id="z5t-01-CL4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CJe-lU-Xie">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="CJe-lU-Xie">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -358,18 +364,24 @@
                                     <constraint firstAttribute="width" secondItem="e5s-KC-pqs" secondAttribute="height" multiplier="1:1" id="CrH-Kj-LrH"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-Ap-0V8">
-                                <rect key="frame" x="147" y="475" width="80" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-Ap-0V8">
+                                <rect key="frame" x="121" y="474" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Result"/>
+                                <color key="backgroundColor" red="0.37994769150000002" green="0.812798083" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="5Xm-AF-yFS" kind="show" id="1pW-gO-oPS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bc-OJ-Rvu">
-                                <rect key="frame" x="127" y="475" width="122" height="30"/>
+                                <rect key="frame" x="121" y="474" width="140" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Convert to sketch"/>
+                                <color key="backgroundColor" red="0.37994769150000002" green="0.812798083" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Convert to sketch">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="fire_api_request:" destination="I07-Ai-XK1" eventType="touchUpInside" id="O3d-uU-Mb6"/>
                                 </connections>
