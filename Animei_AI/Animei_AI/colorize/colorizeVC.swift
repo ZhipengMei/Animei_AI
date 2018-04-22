@@ -15,22 +15,43 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var colorize_button: UIButton!
+    @IBOutlet weak var result_button: UIButton!
     
     //MARK:- Properties
     var originalImage:UIImage?
     
+    //user default
+    let defaults = UserDefaults.standard
+    
     //MARK:- ViewController life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        button_swap()
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.imageView.layer.cornerRadius = 4
         self.imageView.layer.borderWidth = 1.0
         self.imageView.layer.borderColor = UIColor.black.cgColor
         
-//        self.imageView.image = UIImage(named:"girl")!
-        self.imageView.image = UIImage(named:"Vegeta_Sketched")!
+        if let image_data = UserDefaults.standard.data(forKey: "chosen_image") {
+            self.imageView.image = UIImage(data:image_data)
+        } else {
+            self.imageView.image = UIImage(named:"girl")!
+        }
         
+    }
+    
+    func button_swap() {
+        let isColorize = UserDefaults.standard.bool(forKey: "colorize_button")
         
+        if isColorize == true {
+            colorize_button.isHidden = true
+            result_button.isHidden = false
+        } else {
+            result_button.isHidden = true
+            colorize_button.isHidden = false
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,11 +115,7 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
     
     //colorize function call
     @IBAction func colorize(_ sender: Any) {
-        colorize_button.isEnabled = false
-        
         // make an API call here
-        print("\n\n\ncolorize clicked\n")
-        
         let urlString = "http://localhost:3000/tasks"
         post_request(urlString: urlString)
     }
@@ -119,16 +136,18 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
                 upload.responseString { response in
 
                     //parse retured data
-                    let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject]
-                    
-                    print(json!["path"]!)
-                    
-                    self.post_path_request(path: json!["path"]! as! String)
-                    
-                    if json!["path"] != nil {
-                        let vc = ResultVC()
-                        vc.path = json!["path"]! as? String
-                        self.navigationController?.pushViewController(vc, animated: true)
+                    if let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject] {
+                        
+                        var path = json["path"]! as! String
+                        self.post_path_request(path: path)
+                        
+                        path = String((path.split(separator: ".").first!)) + "_fin.jpg"
+                        //save the file path
+                        self.defaults.set(path, forKey: "result_path")
+                        
+                        // swap buttons
+                        self.defaults.set(true, forKey: "colorize_button")
+                        self.button_swap()
                     }
                 }
                 return
@@ -139,10 +158,8 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
     }
     
     func post_path_request(path: String) {
-        print(path)
         let urlString = "http://localhost:3000/tasks/path"
         Alamofire.request(urlString, method: .post, parameters: ["path" : path], encoding: URLEncoding.default)
-        colorize_button.isEnabled = true
     }
     
 }
@@ -161,6 +178,14 @@ extension colorizeVC: UIImagePickerControllerDelegate {
         }
         originalImage = image
         imageView.image = image
+        
+        //userdefault to remember which one chosed
+        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        self.defaults.set(imageData, forKey: "chosen_image")
+        
+        //button swap
+        self.defaults.set(false, forKey: "colorize_button")
+        button_swap()
     }
 
 }

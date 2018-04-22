@@ -12,32 +12,56 @@ import Alamofire
 class ResultVC: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    var path: String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "http://localhost:3000/tasks/path"
-        get_image_request(urlString: urlString)
+        self.imageView.loadGif(asset: "loading")
+        
+        //var filepath = "/uploads/1524378659588/file.jpg"
+        let path = UserDefaults.standard.string(forKey: "result_path")
+
+        let urlString = "http://localhost:3000/tasks/path2"
+        get_image_request(urlString: urlString, path: path!)
     }
     
-    func get_image_request(urlString: String) {
+    func get_image_request(urlString: String, path: String) {
         print("inside get_image_request")
+        print(path)
+        
         // Alamofire 4
-        Alamofire.request(urlString).response { response in // method defaults to `.get`
+        Alamofire.request(urlString, method: .post, parameters: ["path" : path], encoding: URLEncoding.default).response(completionHandler: { response in
             
             //parse retured data
-            let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject]
-            
-            if json!["url"] != nil {
-                print(json!["url"]!)
-                let pic_url = "file://" + (json!["url"]! as! String)
+            if let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject] {
+                
+                let pic_url = "file://" + (json["url"]! as! String)
                 let url = URL(string: pic_url)
-                let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-                self.imageView.image = UIImage(data: data!)
+                print(url!)
+                
+                //make sure your image in this url does exist,
+                //otherwise unwrap in a if let check / try-catch
+                if let data = try? Data(contentsOf: url!) {
+                    self.imageView.image = UIImage(data: data)
+                }
+                
             }
-        }
+            
+        })
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 //    func get_request(urlString: String) {
 //
