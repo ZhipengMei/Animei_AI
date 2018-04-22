@@ -1,6 +1,13 @@
 # ANIME is LYFE!!!
 BeachHacks 2018 @ CSULB
 
+### Tools
+
+Front-End: [Swift](https://developer.apple.com/swift/)
+
+Back-End: [Node.js](), [MongoDB](https://www.mongodb.com/), [Nodemon](https://github.com/remy/nodemon), [Express](https://expressjs.com/), [Mongoose](http://mongoosejs.com/), [Multer](https://github.com/expressjs/multer), [ShellJS](https://github.com/shelljs/shelljs)
+
+Machine Learning Models: [STYLE2PAINTS 2.1](https://github.com/lllyasviel/style2paints), [sketchKeras](https://github.com/lllyasviel/sketchKeras), [neural-style](https://github.com/jcjohnson/neural-style)
 
 ## Home
 
