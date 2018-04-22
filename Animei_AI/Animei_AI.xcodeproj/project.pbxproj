@@ -31,6 +31,8 @@
 		3A30743B208C0E300060C096 /* MultiArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A307433208C0E300060C096 /* MultiArray.swift */; };
 		3A805574208C3C480008841F /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805573208C3C480008841F /* ResultVC.swift */; };
 		3A805576208C823E0008841F /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805575208C823E0008841F /* UIImage+Gif.swift */; };
+		3A805579208CA16C0008841F /* Image2SketchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A805578208CA16C0008841F /* Image2SketchVC.swift */; };
+		3A80557B208CA34C0008841F /* result_i2kVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A80557A208CA34C0008841F /* result_i2kVC.swift */; };
 		3AD3782C208BD9CC001029A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD3782B208BD9CC001029A9 /* AppDelegate.swift */; };
 		3AD37834208BD9CC001029A9 /* Animei_AI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AD37832208BD9CC001029A9 /* Animei_AI.xcdatamodeld */; };
 		3AD37839208BD9CE001029A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD37837208BD9CE001029A9 /* LaunchScreen.storyboard */; };
@@ -62,6 +64,8 @@
 		3A307433208C0E300060C096 /* MultiArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiArray.swift; sourceTree = "<group>"; };
 		3A805573208C3C480008841F /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		3A805575208C823E0008841F /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		3A805578208CA16C0008841F /* Image2SketchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image2SketchVC.swift; sourceTree = "<group>"; };
+		3A80557A208CA34C0008841F /* result_i2kVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = result_i2kVC.swift; sourceTree = "<group>"; };
 		3AD37828208BD9CC001029A9 /* Animei_AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animei_AI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD3782B208BD9CC001029A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD37833208BD9CC001029A9 /* Animei_AI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Animei_AI.xcdatamodel; sourceTree = "<group>"; };
@@ -145,6 +149,15 @@
 			path = colorize;
 			sourceTree = "<group>";
 		};
+		3A805577208CA14E0008841F /* Image2Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				3A805578208CA16C0008841F /* Image2SketchVC.swift */,
+				3A80557A208CA34C0008841F /* result_i2kVC.swift */,
+			);
+			path = Image2Sketch;
+			sourceTree = "<group>";
+		};
 		3AD3781F208BD9CC001029A9 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +179,7 @@
 		3AD3782A208BD9CC001029A9 /* Animei_AI */ = {
 			isa = PBXGroup;
 			children = (
+				3A805577208CA14E0008841F /* Image2Sketch */,
 				3A307415208C0DDE0060C096 /* colorize */,
 				3A307398208C07D90060C096 /* StyleArt */,
 				3A3073B0208C07D90060C096 /* Main.storyboard */,
@@ -315,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A805579208CA16C0008841F /* Image2SketchVC.swift in Sources */,
 				3A307439208C0E300060C096 /* Predictions.swift in Sources */,
 				3A30742B208C0E1A0060C096 /* StyleArtVC.swift in Sources */,
 				3A805574208C3C480008841F /* ResultVC.swift in Sources */,
@@ -336,6 +351,7 @@
 				3A30742A208C0E1A0060C096 /* StyleArt.swift in Sources */,
 				3A307422208C0DFC0060C096 /* FNS-The-Scream.mlmodel in Sources */,
 				3A30743A208C0E300060C096 /* Math.swift in Sources */,
+				3A80557B208CA34C0008841F /* result_i2kVC.swift in Sources */,
 				3A307418208C0DDE0060C096 /* FilterCollectionViewCell.swift in Sources */,
 				3A307425208C0DFC0060C096 /* FNS-Feathers.mlmodel in Sources */,
 				3A3073E8208C09710060C096 /* ViewController.swift in Sources */,

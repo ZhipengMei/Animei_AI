@@ -77,40 +77,49 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
     
     //MARK:- CollectionView datasource and delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:FilterCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "filter", for: indexPath) as! FilterCollectionViewCell
+        
+        cell.imageView.alpha = 0.5
+        
         switch indexPath.item {
         case 0:
-            cell.lbl.text = "Mosaic"
-            cell.imageView.image = #imageLiteral(resourceName: "mosaicImg")
+            cell.imageView.image = #imageLiteral(resourceName: "style0")
         case 1:
-            cell.lbl.text = "Scream"
-            cell.imageView.image = #imageLiteral(resourceName: "screamImg")
+            cell.imageView.image = #imageLiteral(resourceName: "style1")
         case 2:
-            cell.lbl.text = "Muse"
-            cell.imageView.image = #imageLiteral(resourceName: "museImg")
+            cell.imageView.image = #imageLiteral(resourceName: "style2")
         case 3:
-            cell.lbl.text = "Udnie"
-            cell.imageView.image = #imageLiteral(resourceName: "Udanie")
+            cell.imageView.image = #imageLiteral(resourceName: "style3")
         case 4:
-            cell.lbl.text = "Candy"
-            cell.imageView.image = #imageLiteral(resourceName: "candy")
+            cell.imageView.image = #imageLiteral(resourceName: "style4")
         case 5:
-            cell.lbl.text = "Feathers"
-            cell.imageView.image = #imageLiteral(resourceName: "Feathers")
-            
+            cell.imageView.image = #imageLiteral(resourceName: "style5")
+        case 6:
+            cell.imageView.image = #imageLiteral(resourceName: "style6")
         default:
-            cell.lbl.text = ""
+            cell.imageView.image = #imageLiteral(resourceName: "style2")
         }
         
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //select reference images here
+        if let cell = collectionView.cellForItem(at: indexPath) as? FilterCollectionViewCell {
+            cell.imageView.alpha = 1
+            self.defaults.set(indexPath.row, forKey: "reference")
+        }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? FilterCollectionViewCell else {
+            return
+        }
+        cell.imageView.alpha = 0.5
     }
     
     //colorize function call
@@ -159,7 +168,11 @@ class colorizeVC: UIViewController, UINavigationControllerDelegate,UICollectionV
     
     func post_path_request(path: String) {
         let urlString = "http://localhost:3000/tasks/path"
-        Alamofire.request(urlString, method: .post, parameters: ["path" : path], encoding: URLEncoding.default)
+        //pass in the reference image name
+        var ref = UserDefaults.standard.string(forKey: "reference")
+        ref = "./s2p/img/style" + ref! + ".png"
+        print(ref!)
+        Alamofire.request(urlString, method: .post, parameters: ["path" : path, "style" : ref!], encoding: URLEncoding.default)
     }
     
 }
