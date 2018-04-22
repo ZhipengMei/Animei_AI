@@ -18,12 +18,13 @@ class result_i2kVC: UIViewController {
         super.viewDidLoad()
         
         self.imageView.loadGif(asset: "loading")
-//        
-//        //var filepath = "/uploads/1524378659588/file.jpg"
-//        let path = UserDefaults.standard.string(forKey: "result_path")
-//        
-//        let urlString = "http://localhost:3000/tasks/path2"
-//        get_image_request(urlString: urlString, path: path!)
+        
+        //var filepath = "/uploads/1524378659588/file.jpg"
+        if let path = UserDefaults.standard.string(forKey: "sketchKeras_path") {
+            let urlString = "http://localhost:3000/tasks/path2"
+            get_image_request(urlString: urlString, path: path)
+        }
+        
     }
     
     func get_image_request(urlString: String, path: String) {

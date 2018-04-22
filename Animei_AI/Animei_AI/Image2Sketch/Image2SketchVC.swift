@@ -11,6 +11,8 @@ import Alamofire
 
 class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
     
+    //user default
+    let defaults = UserDefaults.standard
     
     //MARK:- IBOutlets
     @IBOutlet weak var imageView: UIImageView!
@@ -44,6 +46,10 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func fire_api_request(_ sender: Any) {
+        upload_image()
+    }
+    
+    func upload_image() {
         let urlString = "http://localhost:3000/tasks"
         
         let image = self.originalImage!
@@ -52,7 +58,7 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "profileImage",fileName: "file.jpg", mimeType: "image/jpg")
         },
-        to: urlString)
+                         to: urlString)
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -62,12 +68,12 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
                     //parse retured data
                     if let json = try? JSONSerialization.jsonObject(with: response.data!, options: .mutableContainers) as! [String:AnyObject] {
                         
-//                        var path = json["path"]! as! String
-//                        self.post_path_request(path: path)
-//                        
-//                        path = String((path.split(separator: ".").first!)) + "_fin.jpg"
-//                        //save the file path
-//                        self.defaults.set(path, forKey: "result_path")
+                        var path = json["path"]! as! String
+                        self.post_sketchKeras_request(path: path)
+                        
+                        path = String((path.split(separator: ".").first!)) + "_sketchKeras.jpg"
+                        //save the file path
+                        self.defaults.set(path, forKey: "sketchKeras_path")
                         
                     }
                 }
@@ -76,6 +82,12 @@ class Image2SketchVC: UIViewController, UINavigationControllerDelegate {
                 print(encodingError)
             }
         }
+    }
+    
+    func post_sketchKeras_request(path: String) {
+        print(path)
+        let urlString = "http://localhost:3000/tasks/sketchKeras"
+        Alamofire.request(urlString, method: .post, parameters: ["path" : path], encoding: URLEncoding.default)
     }
     
     
