@@ -1,6 +1,15 @@
 # ANIME is LYFE!!!
 BeachHacks 2018 @ CSULB
 
+**ANIME is LYFE!!!** is a machine learning driven mobile application which aim to focus on image processing with high accuracy. 
+
+## User Stories
+
+The following functionality is complete:
+- [x] Image2Sketch: Transform a painting to sketch.
+- [x] Colorization: The AI can create its own color style to paint on a sketch.
+- [x] StyleArt: Combining the content of one image with the style of another image.
+
 ### Tools
 
 Front-End: [Swift](https://developer.apple.com/swift/)
